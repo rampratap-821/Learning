@@ -4,7 +4,7 @@ import {StyleSheet} from "react-native";
 const User = StyleSheet.create({
      test:{
         color:"red",
-        backgroundColor:"black",
+        backgroundColor:"green",
         margin:10,
         marginTop:20,
         textAlignVertical:"center",
