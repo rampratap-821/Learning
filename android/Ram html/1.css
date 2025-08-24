@@ -1,0 +1,22 @@
+div{
+    width: 50px;
+    height: 50px;
+    padding: 50px;
+    margin-top: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+#box1{
+    background-color: green;
+    visibility: hidden;
+}
+#box2{
+    background-color: rgb(128, 83, 0);
+}
+#box3{
+    background-color: rgb(2, 0, 128);
+}
+#box4{
+    background-color: rgb(184, 24, 144);
+}

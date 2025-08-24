@@ -1,8 +1,11 @@
-import React from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
-const App = () => {
-  const [inputValue, setInputValue] = React.useState('');
+
+
+import React, { useState } from 'react';
+import { StyleSheet, Text, View, Button, TextInput, TouchableOpacity } from 'react-native';
+
+const Demo  = () => {
+  const [inputValue, setInputValue] = useState('');
 
   const handleButtonPress = () => {
     alert(`You entered: ${inputValue}`);
@@ -13,11 +16,16 @@ const App = () => {
       <Text style={styles.title}>Welcome Upendra Singh</Text>
       <TextInput
         style={styles.input}
-        placeholder="Type something..."
+        placeholder="number"
         value={inputValue}
         onChangeText={setInputValue}
       />
-      <Button title="Submit" onPress={handleButtonPress} />
+      <TouchableOpacity
+        onPress={handleButtonPress}
+        style={styles.innercontaner}
+      >
+        <Text style={{ color: "#fff" }}>Submit now</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -35,13 +43,19 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   input: {
-    height: 40,
-    borderColor: 'gray',
-    borderWidth: 1,
+    padding: 10,
+    borderWidth: 0.5,
+    borderRadius: 6,
     marginBottom: 20,
     width: '100%',
     paddingHorizontal: 10,
   },
+  innercontaner: {
+    backgroundColor: "blue",
+    padding: 10,
+    paddingHorizontal: 110,
+    borderRadius: 6
+  }
 });
 
-export default App;
+export default Demo;

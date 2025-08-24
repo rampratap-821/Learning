@@ -10,8 +10,19 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-native-async-storage/async-storage": "1.18.2",
+    "@react-navigation/bottom-tabs": "6.x",
+    "@react-navigation/drawer": "6.x",
+    "@react-navigation/native": "6.x",
+    "@react-navigation/native-stack": "6.x",
+    "install": "^0.13.0",
     "react": "19.0.0",
-    "react-native": "0.78.1"
+    "react-native": "0.78.1",
+    "react-native-gesture-handler": "^2.26.0",
+    "react-native-linear-gradient": "2.6.2",
+    "react-native-reanimated": "^3.18.0",
+    "react-native-safe-area-context": "^5.4.1",
+    "react-native-screens": "^4.11.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
