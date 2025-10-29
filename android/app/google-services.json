@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "712003651947",
+    "project_id": "ghativyaa",
+    "storage_bucket": "ghativyaa.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712003651947:android:a1f5093d9b635338cda42e",
+        "android_client_info": {
+          "package_name": "com.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBghHvAi4JqFB7PKvTNj5Sx5UJmCsk0io"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -12,6 +12,8 @@ buildscript {
         mavenCentral()
     }
     dependencies {
+        
+         classpath 'com.google.gms:google-services:4.4.1'
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin")
@@ -19,3 +21,10 @@ buildscript {
 }
 
 apply plugin: "com.facebook.react.rootproject"
+// File ke shuru (start) mein nahi, balki saare content ke baad
+// ...
+// ... aapke project ki saari dependencies aur configurations
+// ...
+// Yahan tak ki 'apply from: "../../node_modules/..."' bhi
+// YAHI PAR ADD KAREN
+apply plugin: 'com.google.gms.google-services'

@@ -11,18 +11,25 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.18.2",
+    "@react-native-community/geolocation": "^3.4.0",
+    "@react-native-firebase/app": "^23.4.0",
+    "@react-native-firebase/messaging": "^23.4.0",
     "@react-navigation/bottom-tabs": "6.x",
     "@react-navigation/drawer": "6.x",
     "@react-navigation/native": "6.x",
     "@react-navigation/native-stack": "6.x",
     "install": "^0.13.0",
+    "lottie-react-native": "^7.3.4",
     "react": "19.0.0",
     "react-native": "0.78.1",
     "react-native-gesture-handler": "^2.26.0",
     "react-native-linear-gradient": "2.6.2",
+    "react-native-maps": "1.23.8",
+    "react-native-maps-directions": "^1.9.0",
     "react-native-reanimated": "^3.18.0",
     "react-native-safe-area-context": "^5.4.1",
-    "react-native-screens": "^4.11.1"
+    "react-native-screens": "^4.11.1",
+    "react-native-vector-icons": "^10.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",

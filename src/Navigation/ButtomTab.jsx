@@ -1,61 +1,67 @@
-import * as React from 'react';
-import { Text } from 'react-native';
+import React from 'react';
+import { View, Text, StyleSheet, Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../screen/MainScreen/HomeScreen/Home';
-import Profile from '../screen/MainScreen/HomeScreen/Profile';
-import Match from '../screen/MainScreen/HomeScreen/Match';
-import Love from '../screen/MainScreen/Love';
-import DashBoard from '../screen/MainScreen/DashBoard';
-
+import { NavigationContainer } from '@react-navigation/native';
+import Order from '../screen/MainScreen/Order';
+import Payments from '../screen/MainScreen/Payments';
+import Profile from '../screen/MainScreen/Profile';
+import HederScreen from '../screen/MainScreen/HederSrceen';
 
 const Tab = createBottomTabNavigator();
 
-const ButtomTab = () => {
+export default function BottomTab() {
   return (
-    <Tab.Navigator
-      screenOptions={{
-        tabBarLabelStyle: { fontSize: 12 },
-        tabBarActiveTintColor: 'tomato',
-        tabBarInactiveTintColor: 'gray',
-      
-      
-      }}
-    >
-      <Tab.Screen
-        name="Home"
-        component={DashBoard}
-        options={{
-             headerShown:false,
-          tabBarIcon: () => <Text style={{ fontSize: 20 }}>🏠</Text>,
-        }}
-      />
-       <Tab.Screen
-        name="Profile"
-        component={Profile}
-        options={{
-             headerShown:false,
-          tabBarIcon: () => <Text style={{ fontSize: 20 }}>👤</Text>,
-        }}
-      />
+    
+      <Tab.Navigator
+        screenOptions={({ route }) => ({
+          tabBarIcon: ({ focused }) => {
+            let iconUrl;
 
-      <Tab.Screen
-        name="Match"
-        component={Match}
-        options={{
-            headerShown:false,
-          tabBarIcon: () => <Text style={{ fontSize: 20 }}>🏏</Text>,
+            if (route.name === 'Home') {
+              iconUrl = 'https://cdn-icons-png.flaticon.com/128/1946/1946436.png';
+            } else if (route.name === 'Order') {
+              iconUrl = 'https://cdn-icons-png.flaticon.com/128/839/839860.png';
+            } else if (route.name === 'Payments') {
+              iconUrl = 'https://cdn-icons-png.flaticon.com/128/18276/18276971.png';
+            } else if (route.name === 'Profile') {
+              iconUrl = 'https://cdn-icons-png.flaticon.com/128/18084/18084137.png';
+            }
 
-        }}
-      />
-       <Tab.Screen
-        name="Love"
-        component={Love}
-        options={{
-            optionsShown:false,
-            tabBarIcon:()=><Text style ={{fontSize:20}}>💛</Text>
-        }}
-        />   
-            </Tab.Navigator>
-  ) }
+            return (
+              <Image
+                source={{ uri: iconUrl }}
+                style={{
+                  width: 25,
+                  height: 25,
+                  tintColor: focused ? '#007bff' : 'gray', // Change color when selected
+                }}
+              />
+            );
+          },
+          tabBarShowLabel: true,
+          tabBarActiveTintColor: '#007bff',
+          tabBarInactiveTintColor: 'gray',
+          headerShown: false,
+        })}
+      >
+        <Tab.Screen name="Home" component={HederScreen} />
+        <Tab.Screen name="Order" component={Order} />
+        <Tab.Screen name="Payments" component={Payments} />
+        <Tab.Screen name="Profile" component={Profile} />
+      </Tab.Navigator>
+    
+  );
+}
 
-  export default ButtomTab;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#fff',
+  },
+  text: {
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
